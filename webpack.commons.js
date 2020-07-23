@@ -28,7 +28,7 @@ module.exports = {
     alias: {
       'moment/moment.js': momentPath,
       'moment$': momentPath
-    },
+    }
   },
   plugins: [
     new webpack.IgnorePlugin({ resourceRegExp: /codemirror/ }), // for summernote
@@ -54,6 +54,8 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     contentBasePublicPath: BASE_HREF,
+    hot: true,
+    //inline: true,
     compress: true,
     port: 9900,
     proxy: [{

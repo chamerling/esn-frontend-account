@@ -1,8 +1,14 @@
 {
   "presets": [
-    "@babel/preset-env"
+    [
+      "@babel/preset-env",
+      {
+        "modules": false
+      }
+    ]
   ],
   "plugins": [
-    ["angularjs-annotate", { "es6": true, "dynamicImport": true, "explicitOnly": false }]
+    ["angularjs-annotate", { "es6": true, "dynamicImport": true, "explicitOnly": false }],
+    ["babel-plugin-ng-hot-reload"]
   ]
 }
